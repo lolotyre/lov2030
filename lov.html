@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#000000">
+<title>LOV — Le temps reviendra en 2030</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+html,body{background:#000!important;color:#f5f5f7;min-height:100%}
+:root{--bg:#000;--tx:#f5f5f7;--mu:#86868b;--ln:#2a2a2d;--sf:#1d1d1f;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);background:#000;scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:#000;color:#f5f5f7;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Inter,Arial,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid #f5f5f7;outline-offset:4px;border-radius:4px}
+nav{position:fixed;top:0;left:0;right:0;z-index:9;padding:env(safe-area-inset-top,0px) 22px 0;background:rgba(0,0,0,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(255,255,255,.06)}
+nav div{max-width:1040px;margin:0 auto;height:48px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:600;letter-spacing:.42em;font-size:1rem;margin-right:-.42em}
+nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:.82rem}
+nav ul a{color:#86868b;transition:color .2s}
+nav ul a:hover,nav ul a.on{color:#f5f5f7}
+.view[hidden]{display:none}
+section{padding:0 22px}
+.w{max-width:1040px;margin:0 auto}
+.hero{min-height:92vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding-top:96px;padding-bottom:64px;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(255,255,255,.07),transparent 70%)}
+.hero>*{opacity:0;animation:in 1.2s cubic-bezier(.2,.7,.2,1) forwards}
+.hero>:nth-child(2){animation-delay:.25s}.hero>:nth-child(3){animation-delay:.5s}.hero>:nth-child(4){animation-delay:.75s}
+@keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+h1{font-size:clamp(2.6rem,8vw,5.6rem);line-height:1.04;letter-spacing:-.03em;font-weight:600;margin:0}
+.lead{color:#86868b;font-size:clamp(1.1rem,2.4vw,1.5rem);margin:18px 0 0;max-width:34ch}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);width:100%;max-width:860px;margin:clamp(44px,8vw,80px) 0 0}
+.cd div{padding:0 4px;border-left:1px solid #2a2a2d}
+.cd div:first-child{border-left:0}
+.cd b{display:block;font-weight:200;font-size:clamp(2.2rem,10.5vw,6.2rem);line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.cd span{display:block;color:#86868b;font-size:.85rem;margin-top:10px}
+.cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:clamp(40px,7vw,64px)}
+.btn{font:inherit;font-size:.95rem;padding:12px 26px;border-radius:980px;border:1px solid #f5f5f7;background:#f5f5f7;color:#000;cursor:pointer;transition:opacity .2s}
+.btn:hover{opacity:.82}
+.btn.g{background:transparent;color:#f5f5f7;border-color:#4a4a4e}
+.stmt{padding:clamp(100px,18vw,220px) 22px;text-align:center}
+.stmt p{font-size:clamp(1.9rem,5.4vw,4rem);font-weight:600;letter-spacing:-.025em;line-height:1.12;margin:0 auto;max-width:18ch;color:#f5f5f7}
+.stmt p+p{color:#86868b;margin-top:.15em}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:0 48px;padding-bottom:clamp(80px,12vw,160px)}
+.cols h3{font-size:1.35rem;font-weight:600;margin:0 0 10px;letter-spacing:-.01em}
+.cols div{border-top:1px solid #2a2a2d;padding-top:26px}
+.cols p{margin:0;color:#86868b;font-size:1rem;max-width:32ch}
+.sign{background:#1d1d1f;padding:clamp(72px,12vw,140px) 22px;text-align:center;border-radius:28px;margin:0 12px}
+.sign h2{font-size:clamp(1.9rem,4.6vw,3.2rem);letter-spacing:-.025em;margin:0;font-weight:600}
+.sign p{color:#86868b;margin:14px auto 0;max-width:40ch}
+form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+input{font:inherit;font-size:1rem;color:#f5f5f7;background:#000;border:1px solid #3a3a3e;border-radius:980px;padding:12px 22px;min-width:min(320px,100%);flex:0 1 320px}
+input::placeholder{color:#6e6e73}
+#ok{min-height:1.5em;color:#f5f5f7!important}
+footer{padding:64px 22px 48px;text-align:center;color:#86868b;font-size:.8rem}
+.ph{padding-top:clamp(130px,20vw,200px);padding-bottom:clamp(60px,9vw,110px)}
+.tl{display:grid;grid-template-columns:minmax(120px,240px) 1fr;gap:12px 40px;border-top:1px solid #2a2a2d;padding:36px 0 44px}
+.tl time{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:200;letter-spacing:-.03em;line-height:1}
+.tl h2{font-size:1.5rem;font-weight:600;margin:0 0 10px;letter-spacing:-.015em}
+.tl p{margin:0;color:#86868b;font-size:1.05rem;max-width:56ch}
+.tl.now time{color:#f5f5f7}.tl:not(.now) time{color:#b8b8bd}
+.end{text-align:center;padding:clamp(80px,12vw,150px) 22px}
+.end h2{font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-.025em;margin:0 0 28px;font-weight:600}
+@media(max-width:760px){.cols{grid-template-columns:1fr;gap:34px}.tl{grid-template-columns:1fr}nav ul{gap:18px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero>*{animation:none;opacity:1}}
+
+:root{--serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;--sans:Manrope,-apple-system,"Helvetica Neue",Arial,sans-serif}
+body{font-family:Manrope,-apple-system,"Helvetica Neue",Arial,sans-serif}
+h1,h2,h3,.cd b,.stmt p,.tl time,.logo{font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif}
+h1{font-size:clamp(3rem,9.5vw,6.6rem);font-weight:500;letter-spacing:-.02em;line-height:1}
+.cd b{font-weight:300;letter-spacing:-.02em}
+.stmt p,.sign h2,.end h2{font-weight:500;letter-spacing:-.015em}
+.cols h3{font-size:1.75rem;font-weight:500}
+.logo{font-weight:600;font-size:1.3rem}
+nav ul{gap:8px}
+nav ul a{display:block;padding:7px 18px;border:1px solid #55555a;border-radius:980px;color:#f5f5f7;font-size:.88rem;font-weight:600;transition:background .2s,color .2s}
+nav ul a:hover{background:#26262a}
+nav ul a.on{background:#f5f5f7;color:#000;border-color:#f5f5f7}
+.hint{color:#86868b;font-size:.9rem;margin:32px 0 18px}
+.rail{overflow-x:auto;scrollbar-width:none;margin-bottom:clamp(36px,6vw,64px)}.rail::-webkit-scrollbar{display:none}.rl{position:relative;display:flex;min-width:max(100%,680px)}
+.rl::before,.rl .fl{content:"";position:absolute;left:0;top:5px;height:1px;background:#2a2a2d}
+.rl::before{right:0}
+.rl .fl{background:#f5f5f7;transition:width .5s cubic-bezier(.2,.7,.2,1)}
+.rail button{flex:1;background:none;border:0;color:#86868b;font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif;font-size:clamp(1.25rem,3.6vw,2rem);cursor:pointer;padding:0 0 6px;display:flex;flex-direction:column;align-items:center;gap:14px;position:relative;transition:color .2s}
+.rail button:hover{color:#f5f5f7}
+.dt{width:11px;height:11px;border-radius:50%;background:#000;border:1px solid #6a6a70;transition:all .3s}
+.rail .past .dt{background:#8a8a90;border-color:#8a8a90}
+.rail [aria-selected=true]{color:#f5f5f7}
+.rail [aria-selected=true] .dt{background:#f5f5f7;border-color:#f5f5f7;transform:scale(1.7)}
+.pn{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,5vw,72px);align-items:center;padding-bottom:clamp(60px,9vw,120px)}
+.pn img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px;background:#111;display:block}
+.pn time{display:block;font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif;font-size:clamp(3.4rem,9vw,6.4rem);font-weight:300;line-height:1;letter-spacing:-.02em}
+.pn h2{font-size:clamp(1.9rem,4vw,2.6rem);font-weight:500;margin:14px 0 14px}
+.pn p{color:#86868b;font-size:1.08rem;margin:0;max-width:44ch}
+.pc{display:flex;gap:12px;margin-top:32px}
+.btn:disabled{opacity:.28;cursor:default}
+.pn.in{animation:in .6s cubic-bezier(.2,.7,.2,1)}
+@media(max-width:760px){.pn{grid-template-columns:1fr}.pn img{aspect-ratio:4/3}}
+@media(prefers-reduced-motion:reduce){.pn.in{animation:none}.rl .fl{transition:none}}
+.pn{display:block;max-width:740px}
+.pn p{max-width:60ch}
+.fx{list-style:none;padding:0;margin:30px 0 0;border-top:1px solid #2a2a2d}
+.fx li{padding:13px 0;border-bottom:1px solid #2a2a2d;font-size:.95rem}
+.src{color:#6e6e73;font-size:.8rem;max-width:64ch;margin:0 0 clamp(40px,6vw,80px)}
+</style>
+</head>
+<body>
+<nav><div>
+<a class="logo" href="#/" aria-label="LOV, accueil">LOV</a>
+<ul><li><a href="#/" data-r="home">Accueil</a></li><li><a href="#/histoire" data-r="histoire">Histoire</a></li></ul>
+</div></nav>
+
+<main id="home" class="view">
+<section class="hero">
+<h1>Le temps<br>reviendra.</h1>
+<p class="lead">LOV renaît en 2030, avec un premier modèle.</p>
+<div class="cd" role="timer" aria-label="Compte à rebours jusqu'au 1er janvier 2030">
+<div><b id="j">0</b><span>jours</span></div>
+<div><b id="h">00</b><span>heures</span></div>
+<div><b id="m">00</b><span>minutes</span></div>
+<div><b id="s">00</b><span>secondes</span></div>
+</div>
+<div class="cta"><button class="btn" id="go">Être prévenu</button><a class="btn g" href="#/histoire">Découvrir notre histoire</a></div>
+</section>
+
+<div class="stmt"><p>Certaines choses ne se montrent pas.</p><p>Elles s’attendent.</p></div>
+
+<section><div class="w cols">
+<div><h3>Précision</h3><p>Chaque pièce sera pensée, assemblée et réglée dans nos ateliers, sans compromis.</p></div>
+<div><h3>Héritage</h3><p>Plus d’un siècle d’histoire dans le Haut-Doubs, mis en pause, jamais oublié.</p></div>
+<div><h3>Retenue</h3><p>Un design épuré, où rien n’est là par hasard. L’essentiel, et rien d’autre.</p></div>
+</div></section>
+
+<section class="sign" id="signup">
+<h2>Soyez les premiers informés.</h2>
+<p>Un seul message, le jour où LOV dévoile son premier modèle.</p>
+<form id="f"><input type="email" required placeholder="Votre adresse e-mail" aria-label="Adresse e-mail"><button class="btn" type="submit">Me prévenir</button></form>
+<p id="ok" aria-live="polite"></p>
+</section>
+</main>
+
+<main id="histoire" class="view" hidden>
+<section class="ph"><div class="w">
+<h1>Une maison qui<br>a déjà vécu.</h1>
+<p class="lead" style="max-width:44ch">LOV est née dans le Haut-Doubs, à la frontière suisse. Elle s’est éteinte dans la crise du quartz. En 2030, elle renaît.</p>
+</div></section>
+<section><div class="w">
+<p class="hint">Touchez une date pour parcourir l’histoire de LOV.</p>
+<div class="rail" id="rail" role="tablist" aria-label="Frise chronologique"></div>
+<article class="pn" id="pn" aria-live="polite"><time id="py"></time><h2 id="pt"></h2><p id="pp"></p><ul class="fx" id="pf"></ul>
+<div class="pc"><button class="btn g" id="pv">Précédent</button><button class="btn" id="nx">Suivant</button></div></article>
+</div></section>
+<section><div class="w"><p class="src">Sources : Inventaire du patrimoine de Bourgogne-Franche-Comté, La malle à Papa, témoignages et articles de collectionneurs. Certaines dates varient selon les sources.</p></div></section>
+<section class="end"><h2>Rendez-vous en 2030.</h2><a class="btn" href="#/">Voir le compte à rebours</a></section>
+</main>
+
+<footer>© 2026 LOV. Horlogerie. Retour en 2030.</footer>
+
+<script>
+(function(){
+var T=new Date(2030,0,1).getTime(),$=function(i){return document.getElementById(i)};
+function tick(){var d=Math.max(0,T-Date.now()),v=[Math.floor(d/864e5),Math.floor(d/36e5)%24,Math.floor(d/6e4)%60,Math.floor(d/1e3)%60];
+["j","h","m","s"].forEach(function(k,i){$(k).textContent=i?String(v[i]).padStart(2,"0"):v[i]})}
+tick();setInterval(tick,1000);
+function route(){var h=location.hash==="#/histoire"?"histoire":"home";
+$("home").hidden=h!=="home";$("histoire").hidden=h!=="histoire";
+document.querySelectorAll("nav ul a").forEach(function(a){a.classList.toggle("on",a.dataset.r===h)});
+document.title=h==="home"?"LOV — Le temps reviendra en 2030":"Histoire — LOV";window.scrollTo(0,0)}
+window.addEventListener("hashchange",route);route();
+$("go").addEventListener("click",function(){$("signup").scrollIntoView({behavior:"smooth",block:"center"})});
+$("f").addEventListener("submit",function(e){e.preventDefault();$("ok").textContent="Merci. Vous serez prévenu à l’annonce du premier modèle.";e.target.reset()});
+
+var D=[
+{y:"1893",t:"Une maison à Villers-le-Lac",p:"Dans le Haut-Doubs, à la frontière suisse, Ephrem Lambert (1858–1934), alors inscrit comme tailleur, fait bâtir une maison rue du Maréchal Foch. Vers 1905, il y ajoute une aile pour un atelier d’horlogerie : tout commence là.",f:["Lieu : Villers-le-Lac, alors appelée Lac-ou-Villers","Ephrem Lambert, premier horloger de la famille","Vers 1905 : ouverture de l’atelier"]},
+{y:"1906",t:"Une médaille d’or à Paris",p:"Ephrem Lambert fabrique avec ses fils des montres extra-plates, vendues sous la marque Opéra. Cette année-là, il obtient une médaille d’or à Paris. Vers 1913, l’atelier s’agrandit et se présente comme spécialiste des montres à échappement à ancre.",f:["Distinction : médaille d’or, Paris, 1906","Marque de l’époque : Opéra","Vers 1913 : calibres de 16 à 24 lignes"]},
+{y:"1919",t:"Lambert Frères",p:"Les fils d’Ephrem, Hubert (1885–1948) et Elie (1886–1931), fondent la société Lambert Frères, dédiée à la fabrication et à la vente de montres. L’atelier devient une véritable entreprise.",f:["Société en nom collectif","Fondateurs : Hubert et Elie Lambert"]},
+{y:"1930",t:"Naissance de la marque LOV",p:"Vers 1930, les bâtiments passent à Hubert, qui crée la SARL Hubert Lambert et Fils Montres Lov, dépositaire de la marque Lov. Le nom est un acronyme : Lac-Ou-Villers, l’ancien nom de la commune.",f:["LOV = Lac-Ou-Villers","Capital de la société : 600 000 F","Nom de la commune avant 1948"]},
+{y:"1947",t:"LOV s’affiche",p:"Une publicité pour les montres Lov, datée de 1947, est répertoriée par l’Inventaire du patrimoine. Hubert Lambert meurt en 1948 ; à partir de cette date, la commune s’appelle Villers-le-Lac.",f:["Publicité Lov : 1947","Décès d’Hubert Lambert : 1948"]},
+{y:"1969",t:"Le groupe Finhor",p:"Dans les années 1960, LOV est intégrée aux établissements Anguenot Frères, à Villers-le-Lac, aux côtés de la marque Herma. En 1969, la holding Finhor réunit production et sociétés commerciales. Dans les années 1970, LOV propose encore des chronographes, comme le modèle Grand Prix.",f:["Marques du groupe : Herma, Lov, Anguenot, Jaz","Modèle Grand Prix, années 1970","Calibre suisse Valjoux 7733"]},
+{y:"1978",t:"Le grand regroupement",p:"Le 27 juillet 1978, Finhor et Cupillard-Rième fusionnent au sein de Framelec (France Montre Electronique). En 1981, le groupe est intégré à Matra-Horlogerie. Le quartz bouleverse alors l’horlogerie française.",f:["Framelec : 1 700 personnes","Capacité : 2 millions de montres par an","1981 : Matra-Horlogerie"]},
+{y:"1987",t:"Le silence",p:"En 1987, Matra-Horlogerie cède la place à la Compagnie générale horlogère, filiale du japonais Hattori-Seiko. LOV s’éteint, comme beaucoup de marques françaises, emportée par la crise du quartz. La maison d’origine, rue Foch, est ensuite revendue à Bernard Lambert.",f:["Racheté par la filiale de Hattori-Seiko","Fin de la production LOV"]},
+{y:"2030",t:"Le retour",p:"LOV renaît, plus d’un siècle après ses premières pièces du Haut-Doubs. Même exigence, même retenue, un regard neuf. Le premier modèle de cette nouvelle ère sera dévoilé cette année-là.",f:["Origine : Haut-Doubs, France","Premier modèle : 2030"]}
+],ix=0,R=$("rail"),pn=$("pn");
+R.innerHTML='<div class="rl">'+D.map(function(d,i){return '<button role="tab" data-i="'+i+'"><span class="dt"></span>'+d.y+'</button>'}).join("")+'<i class="fl"></i></div>';
+function set(i){ix=Math.max(0,Math.min(D.length-1,i));var d=D[ix],bs=R.querySelectorAll("button");
+$("py").textContent=d.y;$("pt").textContent=d.t;$("pp").textContent=d.p;
+$("pf").innerHTML=d.f.map(function(x){return "<li>"+x+"</li>"}).join("");
+bs.forEach(function(b,k){b.setAttribute("aria-selected",k===ix);b.classList.toggle("past",k<ix)});
+R.querySelector(".fl").style.width=((ix+.5)/D.length*100)+"%";
+var b=bs[ix];R.scrollTo({left:b.offsetLeft-R.clientWidth/2+b.offsetWidth/2,behavior:"smooth"});
+$("pv").disabled=ix===0;$("nx").disabled=ix===D.length-1;
+pn.classList.remove("in");void pn.offsetWidth;pn.classList.add("in")}
+R.addEventListener("click",function(e){var b=e.target.closest("button");if(b)set(+b.dataset.i)});
+$("pv").onclick=function(){set(ix-1)};$("nx").onclick=function(){set(ix+1)};
+document.addEventListener("keydown",function(e){if($("histoire").hidden)return;if(e.key==="ArrowRight")set(ix+1);if(e.key==="ArrowLeft")set(ix-1)});
+set(0);
+})();
+</script>
+</body>
+</html>
